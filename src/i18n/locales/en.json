@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "about": "About",
+    "stories": "Stories",
+    "skills": "Skills",
+    "platforms": "Platforms",
+    "experience": "Experience",
+    "projects": "Social Feed",
+    "volunteer": "Impact",
+    "certifications": "Badges",
+    "whyMe": "Why Me",
+    "contact": "DM Me",
+    "letsTalk": "Send a DM"
+  },
+  "hero": {
+    "badge": "PLAN • CREATE • ENGAGE • GROW",
+    "verifiedCreator": "Verified Social Media & Content Specialist",
+    "handle": "@fatma.content",
+    "name": "Fatma Magdy",
+    "title": "Social Media Specialist & Content Strategist",
+    "description": "Helping ambitious brands build memorable digital presence, stop the scroll with high-converting creative content, and scale real community engagement through data-driven roadmaps.",
+    "viewWork": "Explore Social Feed",
+    "letsConnect": "Request Campaign (DM)",
+    "availableBadge": "Available for Retainers & New Campaign Launches",
+    "stats": {
+      "postsManaged": "120+ Posts & Campaigns",
+      "postsManagedLabel": "Curated & Managed",
+      "engagementRate": "+185%",
+      "engagementRateLabel": "Avg Engagement Growth",
+      "satisfaction": "100%",
+      "satisfactionLabel": "On-Time Schedule Delivery"
+    },
+    "previewCard": {
+      "tabPost": "Live Post",
+      "tabMetrics": "Metrics",
+      "tabCalendar": "Matrix",
+      "postCaption": "“Winning content starts with a 3-second hook, delivers clear value, and closes with a conversational CTA!”",
+      "reachTag": "+230% Organic Reach",
+      "activeNow": "Active Now for Campaign Management"
+    }
+  },
+  "stories": {
+    "badge": "Highlights & Insights",
+    "title": "Interactive Story Highlights",
+    "subtitle": "Tap on any story highlight to view background insights, toolsets, and strategic frameworks.",
+    "tapToView": "Tap to view",
+    "modal": {
+      "tapNext": "Tap right for next",
+      "tapPrev": "Tap left for previous",
+      "pause": "Press & hold to pause",
+      "close": "Close Story"
+    }
+  },
+  "about": {
+    "badge": "Profile & Bio Breakdown",
+    "title": "Where Information Systems (BIS) Meets Content Creation",
+    "p1": "As a Business Information Systems (BIS) graduate (Class of 2026), I merge data-informed systems logic with the art of visual storytelling to engineer high-performing social media campaigns.",
+    "p2": "I focus on architecting end-to-end content roadmaps that eliminate guesswork, tailored specifically to target audience psychology and distinct brand voices.",
+    "p3": "Renowned for rapid algorithmic adaptation, zero scheduling delays, and an unwavering commitment to driving real organic community growth.",
+    "pillars": {
+      "planning": "Strategic Planning & Matrix",
+      "planningDesc": "30-day multi-format editorial calendars mapped to optimal engagement hours.",
+      "creation": "Creative Hooks & Copywriting",
+      "creationDesc": "Writing scroll-stopping captions, carousels, and high-retention reels.",
+      "growth": "Marketing Funnels (TOFU-BOFU)",
+      "growthDesc": "Nurturing cold prospects into warm loyal buyers through structured stages."
+    }
+  },
+  "skills": {
+    "badge": "Content Manager Suite",
+    "title": "Arsenal & Executive Tooling",
+    "subtitle": "A complete toolkit and methodology covering all aspects of managing, safeguarding, and scaling social media channels."
+  },
+  "platforms": {
+    "badge": "Channel Ecosystem",
+    "title": "Platform Specializations & Formats",
+    "subtitle": "Tailoring distinct strategies and formats optimized for the nuances of each social network."
+  },
+  "experience": {
+    "badge": "Campaign History",
+    "title": "Experience & Brand Management",
+    "subtitle": "Hands-on execution in social media growth, content pipelines, startup page launches, and brand positioning."
+  },
+  "projects": {
+    "badge": "Live Post Feed",
+    "title": "Social Posts & Campaign Feed",
+    "subtitle": "Browse recent case studies and content frameworks presented as authentic, interactive social media posts.",
+    "filters": {
+      "all": "All Feed Posts",
+      "instagram": "Instagram Carousels",
+      "facebook": "Facebook & Communities",
+      "tiktok": "TikTok & Reels",
+      "linkedin": "LinkedIn & Insights",
+      "strategy": "Planning Matrices"
+    },
+    "postCard": {
+      "swipeHint": "Swipe for slides",
+      "viewCase": "View Full Strategy Case",
+      "liked": "Liked",
+      "like": "Like",
+      "comment": "Comment",
+      "share": "Share Link",
+      "saved": "Saved",
+      "save": "Save",
+      "linkCopied": "Post link copied to clipboard!",
+      "readMore": "more",
+      "readLess": "less"
+    }
+  },
+  "volunteer": {
+    "badge": "Impact & Leadership",
+    "title": "Community & Humanitarian Volunteerism",
+    "subtitle": "Giving back to the community through teamwork, relief convoys, and charitable initiative leadership.",
+    "tag": "Social Contribution"
+  },
+  "certifications": {
+    "badge": "Verified Credentials",
+    "title": "Education & Accreditations",
+    "subtitle": "Continuous learning and professional accreditations in Business Systems, Training of Trainers (TOT), and Digital Marketing."
+  },
+  "whyMe": {
+    "badge": "The Value Formula",
+    "title": "Why Choose Me to Manage Your Brand?",
+    "subtitle": "Combining methodical discipline, analytical tracking, creative storytelling, and measurable growth."
+  },
+  "contact": {
+    "badge": "Direct Message (DM)",
+    "title": "Let’s Start Building Your Next Campaign",
+    "subtitle": "Send me your project details or pick a service preset to quickly initiate your custom content plan.",
+    "quickPillLabel": "Quick pick your service focus:",
+    "instantChat": "Instant Chat on WhatsApp",
+    "nameLabel": "Your Name / Business Name",
+    "namePlaceholder": "e.g. Fatma / Startup / Brand Name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "yourname@example.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Account Management / Monthly Content Plan",
+    "serviceLabel": "Area of Interest",
+    "serviceSelect": "Select Service Package",
+    "services": {
+      "management": "Full Social Media Management 📱",
+      "strategy": "Content Strategy & 30-Day Calendar 🗓️",
+      "copywriting": "Copywriting & Caption Bank ✍️",
+      "branding": "Brand Identity & Funnel Setup 🎯",
+      "consultation": "Quick Consultation / Account Audit 💬"
+    },
+    "messageLabel": "Project Brief & Objectives",
+    "messagePlaceholder": "Share your current handle, target audience, timeline, or key objectives...",
+    "submit": "Send DM Request",
+    "submitting": "Sending...",
+    "success": "Your message has been prepared! I'll review your request promptly, or you can message me directly on WhatsApp.",
+    "directEmail": "Direct Email",
+    "phone": "Phone / Direct WhatsApp",
+    "location": "Location & Remote",
+    "locationValue": "Cairo / Sohag, Egypt (Available Worldwide Remotely)",
+    "copyEmail": "Copy Email",
+    "copied": "Copied!"
+  },
+  "footer": {
+    "tagline": "Crafting digital stories that connect, inspire, and grow brands.",
+    "quickLinks": "Quick Links",
+    "connect": "Social Channels",
+    "rights": "All rights reserved © Fatma Magdy.",
+    "designedFor": "Social Media Creator & Management Hub"
+  },
+  "modal": {
+    "close": "Close",
+    "overview": "Project Overview",
+    "deliverables": "Deliverables & Strategy",
+    "tools": "Tools & Methodologies"
+  }
+}

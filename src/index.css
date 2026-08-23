@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-navy: #0f172a;
+    --brand-navy-card: #131d38;
+    --brand-pink: #ec4899;
+    --brand-pink-subtle: #fdf2f8;
+    --brand-rose: #f43f5e;
+    --brand-cream: #fafafc;
+  }
+
+  * {
+    border-color: #f1f5f9;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--brand-cream);
+    color: var(--brand-navy);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  [dir="rtl"] body {
+    font-family: 'Alexandria', 'Cairo', sans-serif;
+  }
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+[dir="rtl"] .font-editorial {
+  font-family: 'Alexandria', 'Cairo', sans-serif;
+  font-weight: 700;
+}
+
+/* Refined Minimalist Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04), 0 2px 6px -2px rgba(15, 23, 42, 0.02);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(244, 114, 182, 0.4);
+  box-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(244, 114, 182, 0.06);
+}
+
+/* Subtle Calm Mesh */
+.mesh-gradient-clean {
+  background: radial-gradient(circle at 15% 15%, rgba(253, 242, 248, 0.7) 0%, transparent 40%),
+              radial-gradient(circle at 85% 85%, rgba(248, 250, 252, 0.9) 0%, transparent 45%);
+}
+
+/* Smooth micro float */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f472b6;
+}
