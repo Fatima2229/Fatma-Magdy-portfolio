@@ -31,7 +31,7 @@ export const storyHighlights: StoryItem[] = [
     icon: 'GraduationCap',
     categoryEn: 'Academic & Tech Base',
     categoryAr: 'الأساس الأكاديمي والتقني',
-    ringColor: 'from-pink-500 via-rose-500 to-amber-500',
+    ringColor: 'from-[#8c52ff] via-[#a77cd6] to-indigo-500',
     slides: [
       {
         id: 's1-1',
@@ -41,7 +41,7 @@ export const storyHighlights: StoryItem[] = [
         textAr: 'دمج التحليل المنطقي لنظم المعلومات مع السرد الإبداعي للمحتوى. كل خطة تسويقية مدعومة بمنطق البيانات، وتقسيم الجمهور، والمتابعة الدقيقة.',
         tagEn: 'Foundation',
         tagAr: 'الأساس العلمي',
-        bgGradient: 'from-[#0f172a] via-[#1e1b4b] to-[#311042]',
+        bgGradient: 'from-[#0a1224] via-[#141b36] to-[#2a1342]',
         iconName: 'GraduationCap',
       },
       {
@@ -52,7 +52,7 @@ export const storyHighlights: StoryItem[] = [
         textAr: 'تطبيق التفكير الممنهج في تحليل منحنيات المشاهدة، ومعدلات النقر والتحويل، ومواكبة خوارزميات المنصات.',
         tagEn: 'Analytics',
         tagAr: 'تحليل دقيق',
-        bgGradient: 'from-[#111827] via-[#1e293b] to-[#0f172a]',
+        bgGradient: 'from-[#0e1a36] via-[#162347] to-[#0a1224]',
         iconName: 'TrendingUp',
       },
     ],
@@ -64,7 +64,7 @@ export const storyHighlights: StoryItem[] = [
     icon: 'Flame',
     categoryEn: 'Content Strategy',
     categoryAr: 'استراتيجية المحتوى',
-    ringColor: 'from-purple-500 via-pink-500 to-rose-500',
+    ringColor: 'from-purple-600 via-[#8c52ff] to-[#c4a1eb]',
     slides: [
       {
         id: 's2-1',
@@ -74,7 +74,7 @@ export const storyHighlights: StoryItem[] = [
         textAr: 'الثواني الثلاث الأولى هي الفارق بين المرور السريع أو التفاعل الحقيقي. نصنع افتتاحيات بصرية ونصوصاً تثير الفضول وتبني المشاهدة المستمرة.',
         tagEn: 'Retention',
         tagAr: 'جذب الانتباه',
-        bgGradient: 'from-[#2e0854] via-[#4a044e] to-[#18002e]',
+        bgGradient: 'from-[#1e0a38] via-[#38125c] to-[#0e1a36]',
         iconName: 'Sparkles',
       },
       {
@@ -85,7 +85,7 @@ export const storyHighlights: StoryItem[] = [
         textAr: 'الجمهور لا يشتري مجرد منتج، بل يشتري قصة وتجربة مميزة. نحول مميزات علامتك إلى مواقف يومية تلامس احتياج واهتمام المتابع.',
         tagEn: 'Connection',
         tagAr: 'بناء الولاء',
-        bgGradient: 'from-[#1a102f] via-[#2d124d] to-[#120824]',
+        bgGradient: 'from-[#140b29] via-[#241142] to-[#0a1224]',
         iconName: 'Heart',
       },
     ],
@@ -97,7 +97,7 @@ export const storyHighlights: StoryItem[] = [
     icon: 'Layers',
     categoryEn: 'Creator Arsenal',
     categoryAr: 'ترسانة العمل',
-    ringColor: 'from-blue-500 via-indigo-500 to-pink-500',
+    ringColor: 'from-blue-500 via-indigo-500 to-[#8c52ff]',
     slides: [
       {
         id: 's3-1',
@@ -806,8 +806,8 @@ export const whyMeData: WhyMeItem[] = [
     iconName: 'BrainCircuit',
     highlightEn: 'Data + Creativity',
     highlightAr: 'بيانات + إبداع',
-    metricEn: '100% Insight-Driven',
-    metricAr: '١٠٠٪ محتوى مدروس',
+    metricEn: 'Insight-Driven Strategy',
+    metricAr: 'استراتيجية مبنية على البيانات',
   },
   {
     id: 'organized-methodical',
@@ -830,8 +830,8 @@ export const whyMeData: WhyMeItem[] = [
     iconName: 'HeartHandshake',
     highlightEn: 'Real Community',
     highlightAr: 'مجتمع حقيقي نشط',
-    metricEn: '+185% Engagement Lift',
-    metricAr: '+١٨٥٪ ارتفاع التفاعل',
+    metricEn: 'High Audience Loyalty',
+    metricAr: 'بناء ولاء وتفاعل حقيقي',
   },
   {
     id: 'growth-driven',

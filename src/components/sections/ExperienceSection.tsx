@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Calendar, MapPin, CheckCircle2, TrendingUp } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { experienceData } from '../../data/portfolioData';
 import { SectionHeading } from '../ui/SectionHeading';
@@ -24,12 +24,12 @@ export const ExperienceSection: React.FC = () => {
               {/* Header */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-100">
                 <div className="space-y-1">
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-pink-50 text-pink-700 border border-pink-100">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#f6f0fc] text-[#733cd6] border border-[#e6d8f8]">
                     <Briefcase size={12} />
                     <span>{isRtl ? item.typeAr : item.typeEn}</span>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-[#0f172a] font-editorial pt-0.5">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#0e1a36] font-editorial pt-0.5">
                     {isRtl ? item.roleAr : item.roleEn}
                   </h3>
 
@@ -39,7 +39,7 @@ export const ExperienceSection: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col sm:items-end gap-1 text-xs text-slate-500 shrink-0">
-                  <div className="inline-flex items-center gap-1 font-bold text-pink-600 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200">
+                  <div className="inline-flex items-center gap-1 font-bold text-[#8c52ff] bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200">
                     <Calendar size={13} />
                     <span>{isRtl ? item.periodAr : item.periodEn}</span>
                   </div>
@@ -49,14 +49,6 @@ export const ExperienceSection: React.FC = () => {
                   </span>
                 </div>
               </div>
-
-              {/* Growth Metric Pill if present */}
-              {(item.growthEn || item.growthAr) && (
-                <div className="mt-4 p-3 rounded-2xl bg-emerald-50/80 border border-emerald-200/70 flex items-center gap-2 text-emerald-800 text-xs font-bold">
-                  <TrendingUp size={16} className="text-emerald-600 shrink-0" />
-                  <span>{isRtl ? item.growthAr : item.growthEn}</span>
-                </div>
-              )}
 
               {/* Summary */}
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-4 pb-3 font-normal">
@@ -73,9 +65,9 @@ export const ExperienceSection: React.FC = () => {
                   {(isRtl ? item.responsibilitiesAr : item.responsibilitiesEn).map((resp, idx) => (
                     <div
                       key={idx}
-                      className="flex items-start gap-2 p-2.5 rounded-xl bg-[#fafafc] border border-slate-100"
+                      className="flex items-start gap-2.5 p-2.5 rounded-xl bg-[#fafafc] border border-slate-100"
                     >
-                      <CheckCircle2 size={14} className="text-pink-500 mt-0.5 shrink-0" />
+                      <CheckCircle2 size={14} className="text-[#8c52ff] mt-0.5 shrink-0" />
                       <span className="text-xs text-slate-700 font-normal leading-snug">
                         {resp}
                       </span>

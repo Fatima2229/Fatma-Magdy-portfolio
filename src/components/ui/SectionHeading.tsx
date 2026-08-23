@@ -24,12 +24,12 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   return (
     <div className={`flex flex-col max-w-3xl mb-12 md:mb-14 ${alignmentStyles} ${className}`}>
       {/* Refined Minimalist Badge */}
-      <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-[#fdf2f8] text-[#be185d] text-[11px] font-bold tracking-wider uppercase mb-3 border border-pink-100/80">
+      <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-[#f6f0fc] text-[#733cd6] text-[11px] font-bold tracking-wider uppercase mb-3 border border-[#e6d8f8]">
         {badge}
       </span>
 
       {/* Main Title */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#0f172a] font-editorial leading-tight mb-3">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#0e1a36] font-editorial leading-tight mb-3">
         {title}
       </h2>
 

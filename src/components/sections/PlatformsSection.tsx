@@ -50,7 +50,7 @@ export const PlatformsSection: React.FC = () => {
           {platformsData.map((platform) => (
             <GlassCard
               key={platform.id}
-              className="bg-white p-6 flex flex-col justify-between space-y-5 border border-slate-200/80 hover:border-pink-200 hover:shadow-xl transition-all duration-300 rounded-3xl"
+              className="bg-white p-6 flex flex-col justify-between space-y-5 border border-slate-200/80 hover:border-[#e6d8f8] hover:shadow-xl transition-all duration-300 rounded-3xl"
             >
               <div className="space-y-3">
                 {/* Header */}
@@ -69,10 +69,10 @@ export const PlatformsSection: React.FC = () => {
 
                 {/* Title & Role */}
                 <div>
-                  <h3 className="text-lg font-bold text-[#0f172a] font-editorial">
+                  <h3 className="text-lg font-bold text-[#0e1a36] font-editorial">
                     {platform.name}
                   </h3>
-                  <p className="text-xs font-semibold text-pink-600 mt-0.5">
+                  <p className="text-xs font-semibold text-[#8c52ff] mt-0.5">
                     {isRtl ? platform.roleAr : platform.roleEn}
                   </p>
                 </div>
@@ -100,14 +100,6 @@ export const PlatformsSection: React.FC = () => {
                     </div>
                   </div>
                 )}
-              </div>
-
-              {/* Bottom Metric Badge */}
-              <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
-                <span className="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100 text-[11px]">
-                  {isRtl ? platform.metricsAr : platform.metricsEn}
-                </span>
-                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: platform.color }} />
               </div>
             </GlassCard>
           ))}

@@ -8,7 +8,6 @@ import {
   ChevronRight,
   Sparkles,
   ArrowUpRight,
-  TrendingUp,
   Check,
 } from 'lucide-react';
 import { ProjectItem } from '../../types/portfolio';
@@ -24,7 +23,7 @@ interface SocialPostCardProps {
 const PlatformPill: React.FC<{ platform: ProjectItem['platform']; size?: number }> = ({ platform, size = 15 }) => {
   switch (platform) {
     case 'instagram':
-      return <InstagramIcon size={size} className="text-pink-500" />;
+      return <InstagramIcon size={size} className="text-[#8c52ff]" />;
     case 'facebook':
       return <FacebookIcon size={size} className="text-blue-600" />;
     case 'tiktok':
@@ -77,65 +76,66 @@ export const SocialPostCard: React.FC<SocialPostCardProps> = ({ project }) => {
 
   return (
     <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
-      {/* 1. Header: Profile Info, Platform Badge, Options */}
-      <div className="p-4 sm:p-5 flex items-center justify-between border-b border-slate-100 bg-slate-50/50">
-        <div className="flex items-center gap-3">
-          <div className="relative">
-            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-pink-400 p-0.5 shadow-2xs bg-white">
+      {/* 1. Header: Profile Info & Platform Badge */}
+      <div className="p-3.5 sm:p-4 flex items-center justify-between gap-3 border-b border-slate-100 bg-slate-50/60">
+        <div className="flex items-center gap-2.5 min-w-0">
+          <div className="relative shrink-0">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-[#8c52ff]/40 p-0.5 shadow-2xs bg-white">
               <img src="/logo.png" alt="Fatma Magdy" className="w-full h-full object-cover" />
             </div>
-            <span className="absolute -bottom-0.5 -end-0.5 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white" />
+            <span className="absolute -bottom-0.5 -end-0.5 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white" />
           </div>
 
-          <div className="text-start">
+          <div className="text-start min-w-0">
             <div className="flex items-center gap-1.5">
-              <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-none">
+              <h4 className="text-xs sm:text-sm font-bold text-[#0e1a36] truncate">
                 Fatma Magdy
               </h4>
-              <span className="w-3.5 h-3.5 rounded-full bg-pink-500 text-white flex items-center justify-center text-[9px] font-black" title="Verified Creator">
+              <span className="w-3.5 h-3.5 rounded-full bg-[#8c52ff] text-white flex items-center justify-center text-[9px] font-black shrink-0" title="Verified Creator">
                 ✓
               </span>
             </div>
-            <div className="flex items-center gap-2 mt-1">
-              <span className="text-[11px] font-medium text-slate-400">@fatma.content</span>
-              <span className="text-slate-300 text-xs">•</span>
-              <span className="text-[11px] font-semibold text-pink-600">
-                {isRtl ? project.postDateAr : project.postDateEn}
-              </span>
-            </div>
+            <p className="text-[11px] font-medium text-slate-400 truncate">@fatma.content</p>
           </div>
         </div>
 
         {/* Platform tag pill */}
-        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-slate-200/80 shadow-2xs">
-          <PlatformPill platform={project.platform} />
-          <span className="text-[11px] font-bold uppercase tracking-wider text-slate-700">
-            {project.platform}
-          </span>
+        <div className="shrink-0">
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-slate-200/80 shadow-2xs">
+            <PlatformPill platform={project.platform} />
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-700">
+              {project.platform}
+            </span>
+          </div>
         </div>
       </div>
 
       {/* 2. Visual Content Slide / Carousel Screen */}
       <div
-        className="relative min-h-[260px] sm:min-h-[290px] p-6 sm:p-7 flex flex-col justify-between text-white overflow-hidden select-none"
+        className="relative min-h-[260px] sm:min-h-[290px] p-5 sm:p-6 flex flex-col justify-between text-white overflow-hidden select-none"
         style={{
-          background: 'linear-gradient(135deg, #090d16 0%, #171f33 60%, #0c1322 100%)',
+          background: 'linear-gradient(135deg, #0a1224 0%, #152245 60%, #0e1a36 100%)',
         }}
       >
         {/* Subtle background mesh */}
         <div
-          className="absolute inset-0 opacity-20 bg-radial from-pink-500 via-transparent to-transparent pointer-events-none"
+          className="absolute inset-0 opacity-20 bg-radial from-[#8c52ff] via-transparent to-transparent pointer-events-none"
           style={{ transform: `scale(${1 + activeSlideIndex * 0.1})` }}
         />
 
-        {/* Top bar inside slide: Category Tag + Slide Count Badge */}
-        <div className="relative z-10 flex items-center justify-between">
-          <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[11px] font-bold text-pink-200">
-            {isRtl ? project.badgeAr : project.badgeEn}
-          </span>
+        {/* Top bar inside slide: Category Tag + Sub-badge + Slide Count */}
+        <div className="relative z-10 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <span className="px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[10px] sm:text-[11px] font-bold text-[#e9dcf7]">
+              {isRtl ? project.postDateAr : project.postDateEn}
+            </span>
+            <span className="px-2.5 py-1 rounded-full bg-[#8c52ff]/25 backdrop-blur-md border border-[#8c52ff]/35 text-[10px] sm:text-[11px] font-semibold text-white">
+              {isRtl ? project.badgeAr : project.badgeEn}
+            </span>
+          </div>
 
           {totalSlides > 1 && (
-            <span className="px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-mono font-bold text-white/90">
+            <span className="px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[10px] sm:text-[11px] font-mono font-bold text-white/90 shrink-0">
               {activeSlideIndex + 1}/{totalSlides}
             </span>
           )}
@@ -143,7 +143,7 @@ export const SocialPostCard: React.FC<SocialPostCardProps> = ({ project }) => {
 
         {/* Slide Main Content */}
         <div className="relative z-10 my-auto text-start space-y-3 py-4">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-pink-500/20 text-pink-300 text-[10px] font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-[#8c52ff]/20 text-[#e9dcf7] text-[10px] font-bold uppercase tracking-wider">
             <span>
               {currentSlide.type === 'hook' && (isRtl ? 'افتتاحية جاذبة (Hook)' : 'Viral Hook')}
               {currentSlide.type === 'strategy' && (isRtl ? 'الاستراتيجية' : 'Strategy')}
@@ -172,7 +172,7 @@ export const SocialPostCard: React.FC<SocialPostCardProps> = ({ project }) => {
                   setActiveSlideIndex(idx);
                 }}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  idx === activeSlideIndex ? 'w-5 bg-pink-400' : 'w-1.5 bg-white/30'
+                  idx === activeSlideIndex ? 'w-5 bg-[#a77cd6]' : 'w-1.5 bg-white/30'
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -230,7 +230,7 @@ export const SocialPostCard: React.FC<SocialPostCardProps> = ({ project }) => {
               {/* Comment / Discussion button */}
               <button
                 onClick={() => openProjectModal(project)}
-                className="flex items-center gap-1.5 text-slate-600 hover:text-pink-600 transition-colors focus:outline-none"
+                className="flex items-center gap-1.5 text-slate-600 hover:text-[#8c52ff] transition-colors focus:outline-none"
                 aria-label={t('projects.postCard.comment')}
               >
                 <MessageCircle size={19} />
@@ -240,7 +240,7 @@ export const SocialPostCard: React.FC<SocialPostCardProps> = ({ project }) => {
               {/* Share button */}
               <button
                 onClick={() => sharePost(project.id, isRtl ? project.titleAr : project.titleEn)}
-                className="flex items-center gap-1.5 text-slate-600 hover:text-pink-600 transition-colors focus:outline-none relative"
+                className="flex items-center gap-1.5 text-slate-600 hover:text-[#8c52ff] transition-colors focus:outline-none relative"
                 aria-label={t('projects.postCard.share')}
               >
                 {isCopied ? <Check size={19} className="text-emerald-500" /> : <Share2 size={19} />}
@@ -256,28 +256,16 @@ export const SocialPostCard: React.FC<SocialPostCardProps> = ({ project }) => {
             {/* Right/End Bookmark / Save Button */}
             <button
               onClick={() => toggleSave(project.id, project.likesCount)}
-              className="text-slate-600 hover:text-pink-600 transition-transform active:scale-90 focus:outline-none"
+              className="text-slate-600 hover:text-[#8c52ff] transition-transform active:scale-90 focus:outline-none"
               aria-label={stats.saved ? t('projects.postCard.saved') : t('projects.postCard.save')}
             >
               <Bookmark
                 size={20}
                 className={`transition-all duration-200 ${
-                  stats.saved ? 'fill-pink-600 text-pink-600' : 'text-slate-600'
+                  stats.saved ? 'fill-[#8c52ff] text-[#8c52ff]' : 'text-slate-600'
                 }`}
               />
             </button>
-          </div>
-
-          {/* Social Proof & Metrics Badges */}
-          <div className="flex items-center justify-between pt-2.5 pb-1">
-            <div className="flex items-center gap-1.5 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">
-              <TrendingUp size={13} />
-              <span>{project.reachGrowth}</span>
-            </div>
-
-            <span className="text-[11px] font-bold text-slate-500">
-              {project.engagementRate} {isRtl ? 'معدل التفاعل' : 'Engagement'}
-            </span>
           </div>
 
           {/* Caption with Toggle */}
@@ -293,7 +281,7 @@ export const SocialPostCard: React.FC<SocialPostCardProps> = ({ project }) => {
               </span>
               <button
                 onClick={() => setIsCaptionExpanded(!isCaptionExpanded)}
-                className="ms-1.5 text-xs font-bold text-pink-600 hover:underline focus:outline-none"
+                className="ms-1.5 text-xs font-bold text-[#8c52ff] hover:underline focus:outline-none"
               >
                 {isCaptionExpanded ? t('projects.postCard.readLess') : t('projects.postCard.readMore')}
               </button>
@@ -305,7 +293,7 @@ export const SocialPostCard: React.FC<SocialPostCardProps> = ({ project }) => {
             {project.hashtags.map((tag, idx) => (
               <span
                 key={idx}
-                className="text-[11px] font-medium text-pink-600 hover:text-pink-700 cursor-pointer"
+                className="text-[11px] font-medium text-[#8c52ff] hover:text-[#733cd6] cursor-pointer"
               >
                 {tag}
               </span>
@@ -317,7 +305,7 @@ export const SocialPostCard: React.FC<SocialPostCardProps> = ({ project }) => {
         <div className="pt-3 border-t border-slate-100">
           <button
             onClick={() => openProjectModal(project)}
-            className="w-full py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-pink-50 border border-slate-200/80 hover:border-pink-300 text-xs sm:text-sm font-bold text-slate-800 hover:text-pink-700 transition-all flex items-center justify-center gap-2 group/cta"
+            className="w-full py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-[#f6f0fc] border border-slate-200/80 hover:border-[#e6d8f8] text-xs sm:text-sm font-bold text-slate-800 hover:text-[#733cd6] transition-all flex items-center justify-center gap-2 group/cta"
           >
             <span>{t('projects.postCard.viewCase')}</span>
             <ArrowUpRight size={15} className="group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5 transition-transform" />

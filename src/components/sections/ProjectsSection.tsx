@@ -20,7 +20,7 @@ export const ProjectsSection: React.FC = () => {
 
   const filterButtons: { id: FilterType; label: string; icon: React.ReactNode }[] = [
     { id: 'all', label: t('projects.filters.all'), icon: <Grid3X3 size={15} /> },
-    { id: 'instagram', label: t('projects.filters.instagram'), icon: <InstagramIcon size={15} className="text-pink-500" /> },
+    { id: 'instagram', label: t('projects.filters.instagram'), icon: <InstagramIcon size={15} className="text-[#8c52ff]" /> },
     { id: 'facebook', label: t('projects.filters.facebook'), icon: <FacebookIcon size={15} className="text-blue-600" /> },
     { id: 'tiktok', label: t('projects.filters.tiktok'), icon: <TikTokIcon size={15} className="text-slate-800" /> },
     { id: 'linkedin', label: t('projects.filters.linkedin'), icon: <LinkedInIcon size={15} className="text-[#0A66C2]" /> },
@@ -47,8 +47,8 @@ export const ProjectsSection: React.FC = () => {
                   onClick={() => setSelectedFilter(btn.id)}
                   className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
                     isActive
-                      ? 'bg-slate-900 text-white shadow-sm'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                      ? 'bg-[#0e1a36] text-white shadow-sm'
+                      : 'text-slate-600 hover:text-[#8c52ff] hover:bg-[#f6f0fc]'
                   }`}
                 >
                   <span>{btn.icon}</span>

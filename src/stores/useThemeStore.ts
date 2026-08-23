@@ -12,26 +12,31 @@ interface ThemeState {
   toggleMobileMenu: () => void;
 }
 
-// RATIONALE: Manage global language state and direction synchronizing with i18n and HTML document root attributes.
-export const useThemeStore = create<ThemeState>((set, get) => ({
-  language: (localStorage.getItem('i18nextLng')?.startsWith('en') ? 'en' : 'ar') as Language,
-  direction: (localStorage.getItem('i18nextLng')?.startsWith('en') ? 'ltr' : 'rtl'),
-  mobileMenuOpen: false,
+// RATIONALE: Manage global language state and direction synchronizing with i18n and HTML document root attributes (defaults to Arabic RTL).
+export const useThemeStore = create<ThemeState>((set, get) => {
+  const initialLang: Language = (typeof window !== 'undefined' && localStorage.getItem('i18nextLng') === 'en') ? 'en' : 'ar';
+  const initialDir = initialLang === 'ar' ? 'rtl' : 'ltr';
 
-  setLanguage: (lang: Language) => {
-    i18n.changeLanguage(lang);
-    const dir = lang === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.dir = dir;
-    document.documentElement.lang = lang;
-    localStorage.setItem('i18nextLng', lang);
-    set({ language: lang, direction: dir });
-  },
+  return {
+    language: initialLang,
+    direction: initialDir,
+    mobileMenuOpen: false,
 
-  toggleLanguage: () => {
-    const nextLang = get().language === 'ar' ? 'en' : 'ar';
-    get().setLanguage(nextLang);
-  },
+    setLanguage: (lang: Language) => {
+      i18n.changeLanguage(lang);
+      const dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.dir = dir;
+      document.documentElement.lang = lang;
+      localStorage.setItem('i18nextLng', lang);
+      set({ language: lang, direction: dir });
+    },
 
-  setMobileMenuOpen: (open: boolean) => set({ mobileMenuOpen: open }),
-  toggleMobileMenu: () => set((state) => ({ mobileMenuOpen: !state.mobileMenuOpen })),
-}));
+    toggleLanguage: () => {
+      const nextLang = get().language === 'ar' ? 'en' : 'ar';
+      get().setLanguage(nextLang);
+    },
+
+    setMobileMenuOpen: (open: boolean) => set({ mobileMenuOpen: open }),
+    toggleMobileMenu: () => set((state) => ({ mobileMenuOpen: !state.mobileMenuOpen })),
+  };
+});

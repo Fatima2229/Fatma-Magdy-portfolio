@@ -53,7 +53,7 @@ export const ProjectModal: React.FC = () => {
       />
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-2xl bg-white/95 backdrop-blur-2xl rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl border border-pink-100/60 z-10 max-h-[90vh] overflow-y-auto animate-scale-up">
+      <div className="relative w-full max-w-2xl bg-white/95 backdrop-blur-2xl rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl border border-[#8c52ff]/20 z-10 max-h-[90vh] overflow-y-auto animate-scale-up">
         {/* Close button */}
         <button
           onClick={() => {
@@ -61,7 +61,7 @@ export const ProjectModal: React.FC = () => {
             closeCertificateModal();
           }}
           aria-label={t('modal.close')}
-          className="absolute top-4 end-4 p-2.5 rounded-full bg-slate-100 hover:bg-pink-100 text-slate-600 hover:text-pink-600 transition-colors duration-200 cursor-pointer z-20"
+          className="absolute top-4 end-4 p-2.5 rounded-full bg-slate-100 hover:bg-[#f6f0fc] text-slate-600 hover:text-[#8c52ff] transition-colors duration-200 cursor-pointer z-20"
         >
           <X size={20} />
         </button>
@@ -71,20 +71,20 @@ export const ProjectModal: React.FC = () => {
           <div className="space-y-6">
             {/* Header Badge */}
             <div className="flex items-center gap-2">
-              <span className="px-3.5 py-1 rounded-full text-xs font-semibold bg-pink-50 text-pink-700 border border-pink-200">
+              <span className="px-3.5 py-1 rounded-full text-xs font-semibold bg-[#f6f0fc] text-[#733cd6] border border-[#e6d8f8]">
                 {isRtl ? selectedProject.badgeAr : selectedProject.badgeEn}
               </span>
-              <span className="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700">
+              <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700">
                 {isRtl ? selectedProject.categoryAr : selectedProject.categoryEn}
               </span>
             </div>
 
             {/* Title */}
             <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#131d38] font-editorial">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#0e1a36] font-editorial">
                 {isRtl ? selectedProject.titleAr : selectedProject.titleEn}
               </h3>
-              <p className="text-sm sm:text-base text-pink-600 font-medium mt-1">
+              <p className="text-sm sm:text-base text-[#8c52ff] font-medium mt-1">
                 {isRtl ? selectedProject.taglineAr : selectedProject.taglineEn}
               </p>
             </div>
@@ -92,7 +92,7 @@ export const ProjectModal: React.FC = () => {
             {/* Summary */}
             <div className="p-5 rounded-2xl bg-[#faf9fc] border border-slate-100 text-slate-700 text-sm sm:text-base leading-relaxed">
               <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
-                <Sparkles size={14} className="text-pink-500" />
+                <Sparkles size={14} className="text-[#8c52ff]" />
                 {t('modal.overview')}
               </h4>
               <p>{isRtl ? selectedProject.summaryAr : selectedProject.summaryEn}</p>
@@ -100,7 +100,7 @@ export const ProjectModal: React.FC = () => {
 
             {/* Deliverables List */}
             <div>
-              <h4 className="text-sm font-bold text-[#131d38] mb-3 flex items-center gap-2">
+              <h4 className="text-sm font-bold text-[#0e1a36] mb-3 flex items-center gap-2">
                 <CheckCircle2 size={18} className="text-emerald-500" />
                 {t('modal.deliverables')}
               </h4>
@@ -108,9 +108,9 @@ export const ProjectModal: React.FC = () => {
                 {(isRtl ? selectedProject.deliverablesAr : selectedProject.deliverablesEn).map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-pink-100/70 text-slate-700 text-xs sm:text-sm font-medium shadow-2xs"
+                    className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-[#e6d8f8] text-slate-700 text-xs sm:text-sm font-medium shadow-2xs"
                   >
-                    <span className="w-2 h-2 rounded-full bg-pink-500 mt-1.5 shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-[#8c52ff] mt-1.5 shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -119,8 +119,8 @@ export const ProjectModal: React.FC = () => {
 
             {/* Tools Used */}
             <div>
-              <h4 className="text-sm font-bold text-[#131d38] mb-2.5 flex items-center gap-2">
-                <Layers size={18} className="text-pink-500" />
+              <h4 className="text-sm font-bold text-[#0e1a36] mb-2.5 flex items-center gap-2">
+                <Layers size={18} className="text-[#8c52ff]" />
                 {t('modal.tools')}
               </h4>
               <div className="flex flex-wrap gap-2">
@@ -161,16 +161,16 @@ export const ProjectModal: React.FC = () => {
         {selectedCertificate && (
           <div className="space-y-6 text-center">
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-pink-500 to-rose-400 text-white flex items-center justify-center shadow-lg shadow-pink-500/20 mb-3">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#8c52ff] to-[#6f38b8] text-white flex items-center justify-center shadow-lg shadow-[#8c52ff]/20 mb-3">
                 <Award size={32} />
               </div>
 
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold bg-pink-50 text-pink-700 border border-pink-200 mb-2">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold bg-[#f6f0fc] text-[#733cd6] border border-[#e6d8f8] mb-2">
                 <ShieldCheck size={14} className="text-emerald-600" />
                 <span>{isRtl ? selectedCertificate.categoryAr : selectedCertificate.categoryEn}</span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-[#131d38] font-editorial">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#0e1a36] font-editorial">
                 {isRtl ? selectedCertificate.titleAr : selectedCertificate.titleEn}
               </h3>
 
@@ -182,7 +182,7 @@ export const ProjectModal: React.FC = () => {
             {/* Certificate Image Viewer if image is provided */}
             {selectedCertificate.certificateImage ? (
               <div className="space-y-3">
-                <div className="relative rounded-2xl overflow-hidden border-2 border-pink-200/80 shadow-xl bg-slate-950 p-1 group">
+                <div className="relative rounded-2xl overflow-hidden border-2 border-[#8c52ff]/30 shadow-xl bg-slate-950 p-1 group">
                   <img
                     src={selectedCertificate.certificateImage}
                     alt={isRtl ? selectedCertificate.titleAr : selectedCertificate.titleEn}
@@ -193,7 +193,7 @@ export const ProjectModal: React.FC = () => {
                       href={selectedCertificate.certificateImage}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-xl bg-white text-slate-900 text-xs font-bold flex items-center gap-2 shadow-lg hover:bg-pink-50"
+                      className="px-4 py-2 rounded-xl bg-white text-slate-900 text-xs font-bold flex items-center gap-2 shadow-lg hover:bg-[#f6f0fc]"
                     >
                       <ExternalLink size={14} />
                       <span>{isRtl ? 'عرض الصورة بالحجم الكامل' : 'Open Full Size'}</span>
@@ -212,9 +212,9 @@ export const ProjectModal: React.FC = () => {
               </div>
             ) : (
               /* Fallback / Verification status banner */
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-pink-50/50 to-purple-50/30 border border-pink-200/60 flex flex-col items-center justify-center gap-3">
-                <Calendar className="text-pink-500" size={28} />
-                <p className="text-sm font-semibold text-[#131d38]">
+              <div className="p-6 rounded-2xl bg-gradient-to-br from-[#f6f0fc] to-[#ede4f8] border border-[#e6d8f8] flex flex-col items-center justify-center gap-3">
+                <Calendar className="text-[#8c52ff]" size={28} />
+                <p className="text-sm font-semibold text-[#0e1a36]">
                   {isRtl ? selectedCertificate.statusAr : selectedCertificate.statusEn}
                 </p>
                 <p className="text-xs text-slate-500 max-w-md">

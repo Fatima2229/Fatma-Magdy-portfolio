@@ -19,15 +19,15 @@ export const SkillsSection: React.FC = () => {
   const getCategoryIcon = (iconName: string) => {
     switch (iconName) {
       case 'Sparkles':
-        return <Sparkles size={18} className="text-pink-600" />;
+        return <Sparkles size={18} className="text-[#8c52ff]" />;
       case 'TrendingUp':
         return <TrendingUp size={18} className="text-indigo-600" />;
       case 'Search':
-        return <Search size={18} className="text-purple-600" />;
+        return <Search size={18} className="text-[#8c52ff]" />;
       case 'Layers':
-        return <Layers size={18} className="text-rose-600" />;
+        return <Layers size={18} className="text-purple-600" />;
       default:
-        return <Sparkles size={18} className="text-pink-600" />;
+        return <Sparkles size={18} className="text-[#8c52ff]" />;
     }
   };
 
@@ -52,8 +52,8 @@ export const SkillsSection: React.FC = () => {
             onClick={() => setActiveCategory('all')}
             className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
               activeCategory === 'all'
-                ? 'bg-[#0f172a] text-white shadow-xs'
-                : 'bg-white text-slate-600 border border-slate-200 hover:border-pink-300 hover:text-pink-600'
+                ? 'bg-[#0e1a36] text-white shadow-xs'
+                : 'bg-white text-slate-600 border border-slate-200 hover:border-[#e6d8f8] hover:text-[#8c52ff]'
             }`}
           >
             <span className="flex items-center gap-1.5">
@@ -68,8 +68,8 @@ export const SkillsSection: React.FC = () => {
               onClick={() => setActiveCategory(cat.id)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
                 activeCategory === cat.id
-                  ? 'bg-[#0f172a] text-white shadow-xs'
-                  : 'bg-white text-slate-600 border border-slate-200 hover:border-pink-300 hover:text-pink-600'
+                  ? 'bg-[#0e1a36] text-white shadow-xs'
+                  : 'bg-white text-slate-600 border border-slate-200 hover:border-[#e6d8f8] hover:text-[#8c52ff]'
               }`}
             >
               {isRtl ? cat.titleAr : cat.titleEn}
@@ -87,7 +87,7 @@ export const SkillsSection: React.FC = () => {
                   {getCategoryIcon(cat.iconName)}
                 </div>
                 <div>
-                  <h3 className="text-base sm:text-lg font-bold text-[#0f172a] font-editorial">
+                  <h3 className="text-base sm:text-lg font-bold text-[#0e1a36] font-editorial">
                     {isRtl ? cat.titleAr : cat.titleEn}
                   </h3>
                   <p className="text-xs text-slate-500 mt-0.5">
@@ -101,12 +101,12 @@ export const SkillsSection: React.FC = () => {
                 {cat.skills.map((skill, idx) => (
                   <div
                     key={idx}
-                    className="p-3 rounded-xl bg-[#fafafc] hover:bg-pink-50/40 border border-slate-100 hover:border-pink-200 transition-colors flex items-center justify-between gap-3 group"
+                    className="p-3 rounded-xl bg-[#fafafc] hover:bg-[#f6f0fc] border border-slate-100 hover:border-[#e6d8f8] transition-colors flex items-center justify-between gap-3 group"
                   >
                     <div className="flex items-center gap-2.5">
                       <CheckCircle2
                         size={15}
-                        className="text-pink-500 shrink-0"
+                        className="text-[#8c52ff] shrink-0"
                       />
                       <span className="text-xs sm:text-sm font-semibold text-slate-800">
                         {isRtl ? skill.nameAr : skill.nameEn}

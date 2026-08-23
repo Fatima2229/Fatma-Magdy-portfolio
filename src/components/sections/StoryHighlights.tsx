@@ -35,7 +35,7 @@ export const StoryHighlights: React.FC = () => {
       className="py-20 md:py-24 relative bg-white border-y border-slate-200/80 scroll-mt-20 overflow-hidden"
     >
       {/* Background Decorative Ambient */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-pink-100/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#8c52ff]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -61,15 +61,15 @@ export const StoryHighlights: React.FC = () => {
                 >
                   {/* Glowing 3D Gradient Ring */}
                   <div
-                    className={`p-[3px] rounded-full bg-gradient-to-tr ${story.ringColor} group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pink-500/20 transition-all duration-300 shadow-sm`}
+                    className={`p-[3px] rounded-full bg-gradient-to-tr ${story.ringColor} group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#8c52ff]/20 transition-all duration-300 shadow-sm`}
                   >
                     <div className="p-0.5 rounded-full bg-white">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#0f172a] text-white flex items-center justify-center relative overflow-hidden group-hover:bg-[#1e1b4b] transition-colors">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#0e1a36] text-white flex items-center justify-center relative overflow-hidden group-hover:bg-[#162347] transition-colors">
                         <IconComponent
                           size={26}
-                          className="text-pink-300 group-hover:scale-110 group-hover:text-pink-200 transition-all duration-300"
+                          className="text-[#c4a1eb] group-hover:scale-110 group-hover:text-white transition-all duration-300"
                         />
-                        <span className="absolute bottom-1.5 right-1.5 px-1.5 py-0.2 rounded-full bg-pink-600 text-[10px] font-bold text-white leading-none">
+                        <span className="absolute bottom-1.5 right-1.5 px-1.5 py-0.2 rounded-full bg-[#8c52ff] text-[10px] font-bold text-white leading-none">
                           {story.slides.length}
                         </span>
                       </div>
@@ -77,7 +77,7 @@ export const StoryHighlights: React.FC = () => {
                   </div>
 
                   {/* Title */}
-                  <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-pink-600 transition-colors text-center max-w-[100px] truncate">
+                  <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#8c52ff] transition-colors text-center max-w-[100px] truncate">
                     {isRtl ? story.titleAr : story.titleEn}
                   </span>
                 </button>
@@ -89,15 +89,15 @@ export const StoryHighlights: React.FC = () => {
               href="#contact"
               className="group flex flex-col items-center gap-2 flex-shrink-0 cursor-pointer focus:outline-none transition-transform active:scale-95"
             >
-              <div className="p-[3px] rounded-full border-2 border-dashed border-pink-300 group-hover:border-pink-500 transition-colors">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center group-hover:bg-pink-100 transition-colors">
+              <div className="p-[3px] rounded-full border-2 border-dashed border-[#8c52ff]/40 group-hover:border-[#8c52ff] transition-colors">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#f6f0fc] text-[#8c52ff] flex items-center justify-center group-hover:bg-[#eedcfc] transition-colors">
                   <Plus
                     size={26}
                     className="group-hover:rotate-90 transition-transform duration-300"
                   />
                 </div>
               </div>
-              <span className="text-xs sm:text-sm font-bold text-pink-700 text-center max-w-[100px] truncate">
+              <span className="text-xs sm:text-sm font-bold text-[#733cd6] text-center max-w-[100px] truncate">
                 {isRtl ? 'طلب خطة' : 'New Plan'}
               </span>
             </a>
@@ -113,7 +113,7 @@ export const StoryHighlights: React.FC = () => {
             return (
               <GlassCard
                 key={story.id}
-                className="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200/90 hover:border-pink-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4 group cursor-pointer"
+                className="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200/90 hover:border-[#e6d8f8] hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4 group cursor-pointer"
                 onClick={() => openStory(story)}
               >
                 <div className="space-y-3.5">
@@ -122,12 +122,12 @@ export const StoryHighlights: React.FC = () => {
                     <div
                       className={`w-12 h-12 rounded-2xl bg-gradient-to-tr ${story.ringColor} p-0.5 shadow-sm`}
                     >
-                      <div className="w-full h-full bg-[#0f172a] rounded-[14px] flex items-center justify-center text-pink-300">
+                      <div className="w-full h-full bg-[#0e1a36] rounded-[14px] flex items-center justify-center text-[#c4a1eb]">
                         <IconComponent size={22} />
                       </div>
                     </div>
 
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-pink-50 text-pink-700 border border-pink-100">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#f6f0fc] text-[#733cd6] border border-[#e6d8f8]">
                       <Eye size={12} />
                       <span>
                         {story.slides.length} {isRtl ? 'شرائح' : 'Slides'}
@@ -140,7 +140,7 @@ export const StoryHighlights: React.FC = () => {
                     <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
                       {isRtl ? story.categoryAr : story.categoryEn}
                     </span>
-                    <h4 className="text-base sm:text-lg font-bold text-[#0f172a] font-editorial group-hover:text-pink-600 transition-colors mt-0.5">
+                    <h4 className="text-base sm:text-lg font-bold text-[#0e1a36] font-editorial group-hover:text-[#8c52ff] transition-colors mt-0.5">
                       {isRtl ? story.titleAr : story.titleEn}
                     </h4>
                   </div>
@@ -160,7 +160,7 @@ export const StoryHighlights: React.FC = () => {
                       e.stopPropagation();
                       openStory(story);
                     }}
-                    className="w-full py-2.5 px-3.5 rounded-xl bg-slate-900 group-hover:bg-gradient-to-r group-hover:from-pink-600 group-hover:to-rose-600 text-white text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2 shadow-xs cursor-pointer"
+                    className="w-full py-2.5 px-3.5 rounded-xl bg-[#0e1a36] group-hover:bg-gradient-to-r group-hover:from-[#8c52ff] group-hover:to-[#6f38b8] text-white text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2 shadow-xs cursor-pointer"
                   >
                     <Play size={13} className="fill-white" />
                     <span>{isRtl ? 'مشاهدة الستوري' : 'Watch Story'}</span>

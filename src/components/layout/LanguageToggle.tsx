@@ -9,9 +9,9 @@ export const LanguageToggle: React.FC<{ className?: string }> = ({ className = '
     <button
       onClick={toggleLanguage}
       aria-label="Toggle language between Arabic and English"
-      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/80 hover:bg-[#fdf2f8] text-[#131d38] hover:text-[#db2777] border border-pink-100 shadow-2xs transition-all duration-300 active:scale-95 cursor-pointer ${className}`}
+      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/80 hover:bg-[#f6f0fc] text-[#0e1a36] hover:text-[#8c52ff] border border-[#e6d8f8] shadow-2xs transition-all duration-300 active:scale-95 cursor-pointer ${className}`}
     >
-      <Globe size={14} className="text-[#f472b6]" />
+      <Globe size={14} className="text-[#8c52ff]" />
       <span className="font-bold">{language === 'ar' ? 'English' : 'العربية'}</span>
     </button>
   );

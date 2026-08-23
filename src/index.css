@@ -2,12 +2,14 @@
 
 @layer base {
   :root {
-    --brand-navy: #0f172a;
-    --brand-navy-card: #131d38;
-    --brand-pink: #ec4899;
-    --brand-pink-subtle: #fdf2f8;
-    --brand-rose: #f43f5e;
-    --brand-cream: #fafafc;
+    --brand-navy: #0e1a36;
+    --brand-navy-card: #121e3d;
+    --brand-pink: #8c52ff; /* mapped to brand primary accent */
+    --brand-pink-subtle: #f6f0fc;
+    --brand-purple: #8c52ff;
+    --brand-purple-subtle: #f6f0fc;
+    --brand-lavender: #a77cd6;
+    --brand-cream: #faf9fd;
   }
 
   * {
@@ -41,7 +43,7 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04), 0 2px 6px -2px rgba(15, 23, 42, 0.02);
+  box-shadow: 0 4px 20px -4px rgba(14, 26, 54, 0.04), 0 2px 6px -2px rgba(14, 26, 54, 0.02);
 }
 
 .glass-panel-hover {
@@ -50,13 +52,13 @@
 
 .glass-panel-hover:hover {
   transform: translateY(-3px);
-  border-color: rgba(244, 114, 182, 0.4);
-  box-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(244, 114, 182, 0.06);
+  border-color: rgba(140, 82, 255, 0.35);
+  box-shadow: 0 12px 30px -8px rgba(14, 26, 54, 0.08), 0 4px 12px -2px rgba(140, 82, 255, 0.08);
 }
 
 /* Subtle Calm Mesh */
 .mesh-gradient-clean {
-  background: radial-gradient(circle at 15% 15%, rgba(253, 242, 248, 0.7) 0%, transparent 40%),
+  background: radial-gradient(circle at 15% 15%, rgba(246, 240, 252, 0.85) 0%, transparent 40%),
               radial-gradient(circle at 85% 85%, rgba(248, 250, 252, 0.9) 0%, transparent 45%);
 }
 
@@ -80,7 +82,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #fafafc;
+  background: #faf9fd;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -89,5 +91,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #f472b6;
+  background: #8c52ff;
 }

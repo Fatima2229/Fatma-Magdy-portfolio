@@ -32,7 +32,7 @@ export const App: React.FC = () => {
       {/* Luxury Brand Preloader */}
       {isLoading && <Preloader onFinish={() => setIsLoading(false)} />}
 
-      <div className="min-h-screen flex flex-col bg-[#fafafc] text-[#0f172a] relative selection:bg-pink-200 selection:text-pink-900">
+      <div className="min-h-screen flex flex-col bg-[#fafafc] text-[#0e1a36] relative selection:bg-[#eedcfc] selection:text-[#5b2b99]">
         {/* Top Navigation */}
         <Navbar />
 

@@ -13,15 +13,15 @@ export const VolunteerSection: React.FC = () => {
   const getVolunteerIcon = (iconType: string) => {
     switch (iconType) {
       case 'charity':
-        return <HeartHandshake size={22} className="text-pink-600" />;
+        return <HeartHandshake size={22} className="text-[#8c52ff]" />;
       case 'food':
         return <Utensils size={22} className="text-emerald-600" />;
       case 'aid':
-        return <Package size={22} className="text-rose-600" />;
+        return <Package size={22} className="text-purple-600" />;
       case 'community':
         return <Users size={22} className="text-indigo-600" />;
       default:
-        return <HeartHandshake size={22} className="text-pink-600" />;
+        return <HeartHandshake size={22} className="text-[#8c52ff]" />;
     }
   };
 
@@ -58,7 +58,7 @@ export const VolunteerSection: React.FC = () => {
                 <div className="space-y-3">
                   {/* Header */}
                   <div className="flex items-start justify-between gap-3">
-                    <div className="p-3 rounded-2xl bg-pink-50 border border-pink-100 shrink-0">
+                    <div className="p-3 rounded-2xl bg-[#f6f0fc] border border-[#e6d8f8] shrink-0">
                       {getVolunteerIcon(item.iconType)}
                     </div>
 
@@ -70,10 +70,10 @@ export const VolunteerSection: React.FC = () => {
 
                   {/* Org & Role */}
                   <div>
-                    <h3 className="text-base sm:text-lg font-bold text-[#0f172a] font-editorial">
+                    <h3 className="text-base sm:text-lg font-bold text-[#0e1a36] font-editorial">
                       {isRtl ? item.organizationAr : item.organizationEn}
                     </h3>
-                    <p className="text-xs font-semibold text-pink-600 mt-0.5">
+                    <p className="text-xs font-semibold text-[#8c52ff] mt-0.5">
                       {isRtl ? item.roleAr : item.roleEn}
                     </p>
                   </div>
@@ -109,8 +109,8 @@ export const VolunteerSection: React.FC = () => {
 
                   {/* Impact Pill if available */}
                   {(item.impactEn || item.impactAr) && (
-                    <div className="p-2.5 rounded-xl bg-pink-50/70 border border-pink-100 text-[11px] font-semibold text-pink-900 flex items-center gap-1.5">
-                      <Sparkles size={13} className="text-pink-600 shrink-0" />
+                    <div className="p-2.5 rounded-xl bg-[#f6f0fc] border border-[#e6d8f8] text-[11px] font-semibold text-[#733cd6] flex items-center gap-1.5">
+                      <Sparkles size={13} className="text-[#8c52ff] shrink-0" />
                       <span>{isRtl ? item.impactAr : item.impactEn}</span>
                     </div>
                   )}

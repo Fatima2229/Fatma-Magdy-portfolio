@@ -17,12 +17,13 @@ i18n
         translation: arTranslations,
       },
     },
+    lng: (typeof window !== 'undefined' && localStorage.getItem('i18nextLng') === 'en') ? 'en' : 'ar',
     fallbackLng: 'ar',
     interpolation: {
       escapeValue: false,
     },
     detection: {
-      order: ['localStorage', 'navigator'],
+      order: ['localStorage'],
       caches: ['localStorage'],
     },
   });

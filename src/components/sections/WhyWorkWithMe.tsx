@@ -17,15 +17,15 @@ export const WhyWorkWithMe: React.FC = () => {
   const getWhyMeIcon = (iconName: string) => {
     switch (iconName) {
       case 'BrainCircuit':
-        return <BrainCircuit size={22} className="text-pink-600" />;
+        return <BrainCircuit size={22} className="text-[#8c52ff]" />;
       case 'CalendarCheck':
         return <CalendarCheck size={22} className="text-sky-600" />;
       case 'HeartHandshake':
-        return <HeartHandshake size={22} className="text-rose-600" />;
+        return <HeartHandshake size={22} className="text-purple-600" />;
       case 'Target':
         return <Target size={22} className="text-emerald-600" />;
       default:
-        return <Sparkles size={22} className="text-pink-600" />;
+        return <Sparkles size={22} className="text-[#8c52ff]" />;
     }
   };
 
@@ -48,16 +48,16 @@ export const WhyWorkWithMe: React.FC = () => {
               <div className="space-y-3">
                 {/* Header */}
                 <div className="flex items-center justify-between">
-                  <div className="p-2.5 rounded-2xl bg-pink-50/80 border border-pink-100">
+                  <div className="p-2.5 rounded-2xl bg-[#f6f0fc] border border-[#e6d8f8]">
                     {getWhyMeIcon(item.iconName)}
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-50 text-pink-700 border border-pink-200">
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#f6f0fc] text-[#733cd6] border border-[#e6d8f8]">
                     {isRtl ? item.highlightAr : item.highlightEn}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-base font-bold text-[#0f172a] font-editorial">
+                <h3 className="text-base font-bold text-[#0e1a36] font-editorial">
                   {isRtl ? item.titleAr : item.titleEn}
                 </h3>
 
@@ -70,10 +70,10 @@ export const WhyWorkWithMe: React.FC = () => {
               {/* Metric Pill */}
               {(item.metricEn || item.metricAr) && (
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700">
-                  <span className="text-[11px] text-pink-600 font-mono">
+                  <span className="text-[11px] text-[#8c52ff] font-mono">
                     {isRtl ? item.metricAr : item.metricEn}
                   </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-pink-500" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#8c52ff]" />
                 </div>
               )}
             </GlassCard>

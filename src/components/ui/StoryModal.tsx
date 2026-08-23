@@ -116,7 +116,7 @@ export const StoryModal: React.FC = () => {
         onTouchEnd={handleResume}
       >
         {/* Ambient backdrop glow */}
-        <div className="absolute inset-0 bg-radial from-pink-500/10 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-radial from-[#8c52ff]/15 via-transparent to-transparent pointer-events-none" />
 
         {/* Top Header: Progress bars & Story Info */}
         <div className="relative z-20 space-y-3">
@@ -146,17 +146,17 @@ export const StoryModal: React.FC = () => {
           {/* Profile row */}
           <div className="flex items-center justify-between pt-1">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-full overflow-hidden border border-pink-400 p-0.5 shadow-sm bg-black/40">
+              <div className="w-9 h-9 rounded-full overflow-hidden border border-[#8c52ff]/50 p-0.5 shadow-sm bg-black/40">
                 <img src="/logo.png" alt="Fatma Magdy" className="w-full h-full object-cover" />
               </div>
               <div className="text-start">
                 <div className="flex items-center gap-1.5">
                   <span className="text-xs sm:text-sm font-bold text-white">Fatma Magdy</span>
-                  <span className="w-3.5 h-3.5 rounded-full bg-pink-500 text-white flex items-center justify-center text-[9px] font-black">
+                  <span className="w-3.5 h-3.5 rounded-full bg-[#8c52ff] text-white flex items-center justify-center text-[9px] font-black">
                     ✓
                   </span>
                 </div>
-                <p className="text-[11px] text-pink-300 font-medium">
+                <p className="text-[11px] text-[#c4a1eb] font-medium">
                   {isRtl ? activeStory.categoryAr : activeStory.categoryEn}
                 </p>
               </div>
@@ -187,12 +187,12 @@ export const StoryModal: React.FC = () => {
         {/* Center Content Slide */}
         <div className="relative z-20 my-auto text-center flex flex-col items-center justify-center space-y-5 px-3">
           {/* Badge icon */}
-          <div className="w-16 h-16 rounded-3xl bg-pink-500/20 border border-pink-400/40 flex items-center justify-center text-pink-300 shadow-lg shadow-pink-500/10">
+          <div className="w-16 h-16 rounded-3xl bg-[#8c52ff]/20 border border-[#8c52ff]/40 flex items-center justify-center text-[#c4a1eb] shadow-lg shadow-[#8c52ff]/15">
             <CurrentIcon size={32} />
           </div>
 
           {/* Slide Tag */}
-          <span className="inline-block px-3 py-1 rounded-full bg-pink-500/20 text-pink-200 text-xs font-semibold tracking-wider border border-pink-400/30">
+          <span className="inline-block px-3 py-1 rounded-full bg-[#8c52ff]/20 text-[#e9dcf7] text-xs font-semibold tracking-wider border border-[#8c52ff]/30">
             {isRtl ? currentSlide.tagAr : currentSlide.tagEn}
           </span>
 
@@ -248,7 +248,7 @@ export const StoryModal: React.FC = () => {
               e.stopPropagation();
               nextSlide();
             }}
-            className="flex items-center gap-1 hover:text-white transition-colors text-pink-400 font-semibold"
+            className="flex items-center gap-1 hover:text-white transition-colors text-[#c4a1eb] font-semibold"
           >
             <span>{isRtl ? 'التالي' : 'Next'}</span>
             {isRtl ? <ChevronLeft size={16} /> : <ChevronRight size={16} />}

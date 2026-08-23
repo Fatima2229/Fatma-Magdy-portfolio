@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative bg-[#0f172a] text-white pt-16 pb-12 overflow-hidden border-t border-slate-800">
+    <footer className="relative bg-[#0a1224] text-white pt-16 pb-12 overflow-hidden border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
           {/* Brand Info */}
@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
                 <h3 className="text-lg font-bold font-editorial text-white tracking-tight">
                   {isRtl ? 'فاطمة مجدي' : 'Fatma Magdy'}
                 </h3>
-                <p className="text-[11px] text-pink-400 font-semibold uppercase tracking-wider">
+                <p className="text-[11px] text-[#c4a1eb] font-semibold uppercase tracking-wider">
                   {isRtl ? 'أخصائية سوشيال ميديا ومحتوى' : 'Social & Content Specialist'}
                 </p>
               </div>
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-pink-400 mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#c4a1eb] mb-4">
               {t('footer.quickLinks')}
             </h4>
             <ul className="space-y-2.5">
@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
                 <li key={item.id}>
                   <a
                     href={item.href}
-                    className="text-xs text-slate-300 hover:text-pink-300 transition-colors"
+                    className="text-xs text-slate-300 hover:text-[#c4a1eb] transition-colors"
                   >
                     {isRtl ? item.labelAr : item.labelEn}
                   </a>
@@ -58,7 +58,7 @@ export const Footer: React.FC = () => {
 
           {/* More Sections */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-pink-400 mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#c4a1eb] mb-4">
               {isRtl ? 'أقسام إضافية' : 'More Highlights'}
             </h4>
             <ul className="space-y-2.5">
@@ -66,7 +66,7 @@ export const Footer: React.FC = () => {
                 <li key={item.id}>
                   <a
                     href={item.href}
-                    className="text-xs text-slate-300 hover:text-pink-300 transition-colors"
+                    className="text-xs text-slate-300 hover:text-[#c4a1eb] transition-colors"
                   >
                     {isRtl ? item.labelAr : item.labelEn}
                   </a>
@@ -77,14 +77,14 @@ export const Footer: React.FC = () => {
 
           {/* Contact Snippets */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-pink-400 mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#c4a1eb] mb-4">
               {t('footer.connect')}
             </h4>
             <a
               href="mailto:fatimamagdy.8884@gmail.com"
               className="flex items-center gap-2.5 text-xs text-slate-300 hover:text-white transition-colors group"
             >
-              <div className="p-1.5 rounded-lg bg-slate-800 text-pink-400 group-hover:bg-pink-900/40 transition-colors">
+              <div className="p-1.5 rounded-lg bg-slate-800 text-[#c4a1eb] group-hover:bg-[#8c52ff]/30 transition-colors">
                 <Mail size={14} />
               </div>
               <span className="truncate">fatimamagdy.8884@gmail.com</span>
@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
             </a>
 
             <div className="flex items-center gap-2.5 text-xs text-slate-300">
-              <div className="p-1.5 rounded-lg bg-slate-800 text-rose-400">
+              <div className="p-1.5 rounded-lg bg-slate-800 text-[#c4a1eb]">
                 <MapPin size={14} />
               </div>
               <span>{isRtl ? 'القاهرة / سوهاج، مصر' : 'Cairo / Sohag, Egypt'}</span>
@@ -116,15 +116,15 @@ export const Footer: React.FC = () => {
           <p className="flex items-center gap-1.5">
             <span>© {new Date().getFullYear()} Fatma Magdy.</span>
             <span>{t('footer.rights')}</span>
-            <span className="hidden sm:inline-flex items-center gap-1 text-pink-400/80">
-              Crafted with <Heart size={11} className="fill-pink-500 text-pink-500" />
+            <span className="hidden sm:inline-flex items-center gap-1 text-[#c4a1eb]/80">
+              Crafted with <Heart size={11} className="fill-[#8c52ff] text-[#8c52ff]" />
             </span>
           </p>
 
           <button
             onClick={scrollToTop}
             aria-label="Back to top"
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800 hover:bg-pink-600 text-white transition-colors text-xs font-semibold cursor-pointer"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800 hover:bg-[#8c52ff] text-white transition-colors text-xs font-semibold cursor-pointer"
           >
             <span>{isRtl ? 'للأعلى' : 'Back to Top'}</span>
             <ArrowUp size={13} />

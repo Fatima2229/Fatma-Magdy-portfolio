@@ -50,7 +50,7 @@ export const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-20 md:py-28 relative bg-[#faf9fc] overflow-hidden scroll-mt-20">
       {/* Background Decorative Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gradient-to-tr from-pink-300/15 via-rose-200/10 to-indigo-300/15 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gradient-to-tr from-[#8c52ff]/15 via-indigo-200/10 to-[#0e1a36]/10 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
@@ -64,7 +64,7 @@ export const ContactSection: React.FC = () => {
           {/* Left / Direct Social DM Info Cards */}
           <div className="lg:col-span-5 space-y-5">
             {/* WhatsApp Quick Chat Card */}
-            <GlassCard className="bg-white/90 p-6 space-y-3 border border-pink-100/80 shadow-md">
+            <GlassCard className="bg-white/90 p-6 space-y-3 border border-[#8c52ff]/15 shadow-md">
               <div className="flex items-start justify-between">
                 <div className="p-3 rounded-2xl bg-emerald-50 text-emerald-600">
                   <Phone size={22} />
@@ -87,7 +87,7 @@ export const ContactSection: React.FC = () => {
                 <a
                   href="tel:+201154328884"
                   dir="ltr"
-                  className="text-base sm:text-lg font-bold text-[#131d38] hover:text-emerald-600 block transition-colors mt-0.5 text-start font-mono"
+                  className="text-base sm:text-lg font-bold text-[#0e1a36] hover:text-emerald-600 block transition-colors mt-0.5 text-start font-mono"
                 >
                   +20 115 432 8884
                 </a>
@@ -95,16 +95,16 @@ export const ContactSection: React.FC = () => {
             </GlassCard>
 
             {/* Direct Email Card */}
-            <GlassCard className="bg-white/90 p-6 space-y-3 border border-pink-100/80 shadow-md">
+            <GlassCard className="bg-white/90 p-6 space-y-3 border border-[#8c52ff]/15 shadow-md">
               <div className="flex items-start justify-between">
-                <div className="p-3 rounded-2xl bg-pink-50 text-pink-600">
+                <div className="p-3 rounded-2xl bg-[#f6f0fc] text-[#8c52ff]">
                   <Mail size={22} />
                 </div>
                 <button
                   onClick={() =>
                     copyToClipboard('fatimamagdy.8884@gmail.com', 'email')
                   }
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#faf9fc] hover:bg-pink-100 text-slate-700 hover:text-pink-700 border border-slate-200 transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#faf9fc] hover:bg-[#f6f0fc] text-slate-700 hover:text-[#8c52ff] border border-slate-200 transition-colors cursor-pointer"
                 >
                   {copiedField === 'email' ? (
                     <>
@@ -126,7 +126,7 @@ export const ContactSection: React.FC = () => {
                 </span>
                 <a
                   href="mailto:fatimamagdy.8884@gmail.com"
-                  className="text-base sm:text-lg font-bold text-[#131d38] hover:text-pink-600 block transition-colors mt-0.5 truncate font-mono"
+                  className="text-base sm:text-lg font-bold text-[#0e1a36] hover:text-[#8c52ff] block transition-colors mt-0.5 truncate font-mono"
                 >
                   fatimamagdy.8884@gmail.com
                 </a>
@@ -134,7 +134,7 @@ export const ContactSection: React.FC = () => {
             </GlassCard>
 
             {/* Location & Remote Availability */}
-            <GlassCard className="bg-white/90 p-6 space-y-3 border border-pink-100/80 shadow-md">
+            <GlassCard className="bg-white/90 p-6 space-y-3 border border-[#8c52ff]/15 shadow-md">
               <div className="p-3 rounded-2xl bg-indigo-50 text-indigo-600 w-fit">
                 <MapPin size={22} />
               </div>
@@ -143,7 +143,7 @@ export const ContactSection: React.FC = () => {
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
                   {t('contact.location')}
                 </span>
-                <p className="text-base sm:text-lg font-bold text-[#131d38] mt-0.5">
+                <p className="text-base sm:text-lg font-bold text-[#0e1a36] mt-0.5">
                   {t('contact.locationValue')}
                 </p>
                 <p className="text-xs text-slate-500 mt-1">
@@ -157,7 +157,7 @@ export const ContactSection: React.FC = () => {
 
           {/* Right / Validated DM Form */}
           <div className="lg:col-span-7">
-            <GlassCard className="bg-white/95 p-6 sm:p-10 shadow-xl border border-pink-200/80">
+            <GlassCard className="bg-white/95 p-6 sm:p-10 shadow-xl border border-[#8c52ff]/20">
               {isSubmitted ? (
                 <div className="p-8 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-4 animate-fade-in">
                   <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
@@ -185,8 +185,8 @@ export const ContactSection: React.FC = () => {
                           onClick={() => handleChipClick(opt.value)}
                           className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                             selectedService === opt.value
-                              ? 'bg-pink-600 text-white shadow-xs'
-                              : 'bg-slate-100 hover:bg-pink-50 text-slate-700 hover:text-pink-700 border border-slate-200/80'
+                              ? 'bg-[#0e1a36] text-white shadow-xs'
+                              : 'bg-slate-100 hover:bg-[#f6f0fc] text-slate-700 hover:text-[#8c52ff] border border-slate-200/80'
                           }`}
                         >
                           {opt.label}
@@ -209,7 +209,7 @@ export const ContactSection: React.FC = () => {
                         type="text"
                         placeholder={t('contact.namePlaceholder')}
                         {...register('fullName')}
-                        className={`w-full px-4 py-3 rounded-xl bg-[#faf9fc] border text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-500/30 transition-all ${
+                        className={`w-full px-4 py-3 rounded-xl bg-[#faf9fc] border text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8c52ff]/30 focus:border-[#8c52ff] transition-all ${
                           errors.fullName ? 'border-rose-400 ring-rose-200' : 'border-slate-200/80'
                         }`}
                       />
@@ -232,7 +232,7 @@ export const ContactSection: React.FC = () => {
                         type="email"
                         placeholder={t('contact.emailPlaceholder')}
                         {...register('email')}
-                        className={`w-full px-4 py-3 rounded-xl bg-[#faf9fc] border text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-500/30 transition-all ${
+                        className={`w-full px-4 py-3 rounded-xl bg-[#faf9fc] border text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8c52ff]/30 focus:border-[#8c52ff] transition-all ${
                           errors.email ? 'border-rose-400 ring-rose-200' : 'border-slate-200/80'
                         }`}
                       />
@@ -258,7 +258,7 @@ export const ContactSection: React.FC = () => {
                         type="text"
                         placeholder={t('contact.subjectPlaceholder')}
                         {...register('subject')}
-                        className={`w-full px-4 py-3 rounded-xl bg-[#faf9fc] border text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-500/30 transition-all ${
+                        className={`w-full px-4 py-3 rounded-xl bg-[#faf9fc] border text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8c52ff]/30 focus:border-[#8c52ff] transition-all ${
                           errors.subject ? 'border-rose-400 ring-rose-200' : 'border-slate-200/80'
                         }`}
                       />
@@ -307,7 +307,7 @@ export const ContactSection: React.FC = () => {
                       rows={4}
                       placeholder={t('contact.messagePlaceholder')}
                       {...register('message')}
-                      className={`w-full px-4 py-3 rounded-xl bg-[#faf9fc] border text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-500/30 transition-all ${
+                      className={`w-full px-4 py-3 rounded-xl bg-[#faf9fc] border text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8c52ff]/30 focus:border-[#8c52ff] transition-all ${
                         errors.message ? 'border-rose-400 ring-rose-200' : 'border-slate-200/80'
                       }`}
                     />
@@ -324,7 +324,7 @@ export const ContactSection: React.FC = () => {
                       type="submit"
                       variant="primary"
                       size="lg"
-                      className="w-full font-bold shadow-md shadow-pink-500/10"
+                      className="w-full font-bold shadow-md shadow-[#0e1a36]/15"
                       disabled={isSubmitting}
                       icon={isSubmitting ? <Sparkles size={16} className="animate-spin" /> : <Send size={16} />}
                       iconPosition="right"

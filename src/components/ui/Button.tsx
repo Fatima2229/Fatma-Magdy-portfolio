@@ -23,7 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    'inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#f472b6]/50 shadow-sm cursor-pointer';
+    'inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#8c52ff]/40 shadow-sm cursor-pointer';
 
   const sizeStyles = {
     sm: 'text-xs px-4 py-2 gap-1.5',
@@ -31,17 +31,18 @@ export const Button: React.FC<ButtonProps> = ({
     lg: 'text-base px-7 py-3.5 gap-2.5 shadow-md',
   }[size];
 
+  // RATIONALE: Updated palette with exact logo Midnight Navy (#0e1a36) and Regal Lavender/Purple (#8c52ff)
   const variantStyles = {
     primary:
-      'bg-[#131d38] text-white hover:bg-[#1e2b4f] hover:shadow-lg hover:shadow-[#131d38]/20 border border-[#131d38]',
+      'bg-[#0e1a36] text-white hover:bg-[#162447] hover:shadow-lg hover:shadow-[#0e1a36]/25 border border-[#0e1a36]',
     secondary:
-      'bg-white text-[#131d38] hover:bg-[#fdf2f8] hover:text-[#db2777] border border-slate-200/80 hover:border-[#f472b6]/40 hover:shadow-md',
+      'bg-white text-[#0e1a36] hover:bg-[#f6f0fc] hover:text-[#8c52ff] border border-slate-200/80 hover:border-[#8c52ff]/40 hover:shadow-md',
     'soft-pink':
-      'bg-[#fdf2f8] text-[#db2777] hover:bg-[#fce7f3] hover:text-[#be185d] border border-[#fbcfe8]',
+      'bg-[#f6f0fc] text-[#733cd6] hover:bg-[#eedcfc] hover:text-[#5b2b99] border border-[#e2d2f7]',
     outline:
-      'bg-transparent text-[#131d38] hover:bg-white/80 border border-[#131d38]/30 hover:border-[#131d38] hover:shadow-sm',
+      'bg-transparent text-[#0e1a36] hover:bg-white/80 border border-[#0e1a36]/30 hover:border-[#0e1a36] hover:shadow-sm',
     ghost:
-      'bg-transparent text-[#131d38] hover:bg-[#fdf2f8] hover:text-[#db2777] border border-transparent shadow-none',
+      'bg-transparent text-[#0e1a36] hover:bg-[#f6f0fc] hover:text-[#8c52ff] border border-transparent shadow-none',
   }[variant];
 
   const content = (

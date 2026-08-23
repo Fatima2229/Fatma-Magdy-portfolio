@@ -41,10 +41,10 @@ export const AboutSection: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-[#0f172a] font-editorial">
+                  <h3 className="text-xl font-bold text-[#0e1a36] font-editorial">
                     {isRtl ? 'فاطمة مجدي' : 'Fatma Magdy'}
                   </h3>
-                  <p className="text-xs sm:text-sm text-pink-600 font-semibold mt-0.5">
+                  <p className="text-xs sm:text-sm text-[#8c52ff] font-semibold mt-0.5">
                     {isRtl ? 'أخصائية سوشيال ميديا ومحتوى' : 'Social Media & Content Specialist'}
                   </p>
                 </div>
@@ -56,24 +56,24 @@ export const AboutSection: React.FC = () => {
                       <GraduationCap size={15} className="text-slate-400" />
                       {isRtl ? 'المؤهل العلمي' : 'Degree'}
                     </span>
-                    <span className="font-bold text-[#0f172a]">
+                    <span className="font-bold text-[#0e1a36]">
                       {isRtl ? 'نظم معلومات الأعمال 2026' : 'BIS Degree (2026)'}
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between text-xs text-slate-600 px-3 py-2 rounded-xl bg-slate-50">
                     <span className="flex items-center gap-1.5 font-medium">
-                      <Sparkles size={15} className="text-pink-500" />
+                      <Sparkles size={15} className="text-[#8c52ff]" />
                       {isRtl ? 'التخصص' : 'Focus'}
                     </span>
-                    <span className="font-bold text-[#0f172a]">
+                    <span className="font-bold text-[#0e1a36]">
                       {isRtl ? 'إدارة محتوى ونمو رقمي' : 'Content & Growth'}
                     </span>
                   </div>
                 </div>
 
                 {/* Tagline Pill */}
-                <div className="p-2.5 rounded-xl bg-pink-50/60 text-pink-800 text-xs font-semibold border border-pink-100/60">
+                <div className="p-2.5 rounded-xl bg-[#f6f0fc] text-[#733cd6] text-xs font-semibold border border-[#e6d8f8]">
                   <span>Plan • Create • Engage • Grow</span>
                 </div>
               </div>
@@ -108,8 +108,8 @@ export const AboutSection: React.FC = () => {
                     key={idx}
                     className="p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs text-center flex flex-col items-center justify-center gap-1"
                   >
-                    <IconComponent size={16} className="text-pink-500 mb-0.5" />
-                    <span className="text-xs font-bold text-[#0f172a]">
+                    <IconComponent size={16} className="text-[#8c52ff] mb-0.5" />
+                    <span className="text-xs font-bold text-[#0e1a36]">
                       {isRtl ? item.ar : item.en}
                     </span>
                   </div>
@@ -120,10 +120,10 @@ export const AboutSection: React.FC = () => {
             {/* 3 Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2">
               <GlassCard className="p-4 sm:p-5 text-start bg-white">
-                <div className="p-2 rounded-xl bg-pink-50 text-pink-600 w-fit mb-2.5">
+                <div className="p-2 rounded-xl bg-[#f6f0fc] text-[#8c52ff] w-fit mb-2.5">
                   <CalendarDays size={16} />
                 </div>
-                <h4 className="text-sm font-bold text-[#0f172a] mb-1">
+                <h4 className="text-sm font-bold text-[#0e1a36] mb-1">
                   {t('about.pillars.planning')}
                 </h4>
                 <p className="text-xs text-slate-500 leading-relaxed">
@@ -135,7 +135,7 @@ export const AboutSection: React.FC = () => {
                 <div className="p-2 rounded-xl bg-purple-50 text-purple-600 w-fit mb-2.5">
                   <PenTool size={16} />
                 </div>
-                <h4 className="text-sm font-bold text-[#0f172a] mb-1">
+                <h4 className="text-sm font-bold text-[#0e1a36] mb-1">
                   {t('about.pillars.creation')}
                 </h4>
                 <p className="text-xs text-slate-500 leading-relaxed">
@@ -147,7 +147,7 @@ export const AboutSection: React.FC = () => {
                 <div className="p-2 rounded-xl bg-indigo-50 text-indigo-600 w-fit mb-2.5">
                   <TrendingUp size={16} />
                 </div>
-                <h4 className="text-sm font-bold text-[#0f172a] mb-1">
+                <h4 className="text-sm font-bold text-[#0e1a36] mb-1">
                   {t('about.pillars.growth')}
                 </h4>
                 <p className="text-xs text-slate-500 leading-relaxed">

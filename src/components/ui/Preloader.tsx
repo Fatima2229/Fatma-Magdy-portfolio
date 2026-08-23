@@ -39,20 +39,20 @@ export const Preloader: React.FC<PreloaderProps> = ({ onFinish }) => {
       }`}
     >
       {/* Subtle background luxury glow */}
-      <div className="absolute w-96 h-96 rounded-full bg-pink-600/15 blur-3xl pointer-events-none animate-pulse" />
+      <div className="absolute w-96 h-96 rounded-full bg-[#8c52ff]/15 blur-3xl pointer-events-none animate-pulse" />
       <div className="absolute w-80 h-80 rounded-full bg-indigo-600/10 blur-3xl pointer-events-none -top-10 -right-10" />
 
       <div className="relative z-10 flex flex-col items-center max-w-sm px-6 text-center space-y-6">
         {/* Animated Brand Logo Container */}
         <div className="relative flex items-center justify-center">
           {/* Rotating Outer Ring */}
-          <div className="absolute -inset-4 rounded-full border border-pink-500/30 border-t-pink-400 border-r-transparent animate-spin duration-1000" />
+          <div className="absolute -inset-4 rounded-full border border-[#8c52ff]/30 border-t-[#a77cd6] border-r-transparent animate-spin duration-1000" />
           
           {/* Pulsing Middle Ring */}
-          <div className="absolute -inset-2 rounded-full border border-pink-500/20 animate-pulse" />
+          <div className="absolute -inset-2 rounded-full border border-[#8c52ff]/20 animate-pulse" />
 
           {/* Logo Frame */}
-          <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white p-1.5 shadow-2xl shadow-pink-500/20 overflow-hidden">
+          <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white p-1.5 shadow-2xl shadow-[#8c52ff]/20 overflow-hidden">
             <img
               src="/logo.png"
               alt="Fatma Magdy"
@@ -66,7 +66,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onFinish }) => {
           <h2 className="text-xl sm:text-2xl font-bold font-editorial text-white tracking-wide">
             {isRtl ? 'فاطمة مجدي' : 'Fatma Magdy'}
           </h2>
-          <p className="text-xs font-semibold text-pink-400 uppercase tracking-widest">
+          <p className="text-xs font-semibold text-[#c4a1eb] uppercase tracking-widest">
             {isRtl ? 'أخصائية سوشيال ميديا ومحتوى' : 'Social & Content Specialist'}
           </p>
         </div>
@@ -76,14 +76,14 @@ export const Preloader: React.FC<PreloaderProps> = ({ onFinish }) => {
           {/* Progress Track */}
           <div className="w-full h-1.5 bg-slate-800/80 rounded-full overflow-hidden p-0.5 border border-slate-700/60">
             <div
-              className="h-full bg-gradient-to-r from-pink-500 via-rose-400 to-pink-300 rounded-full transition-all duration-200 ease-out shadow-sm shadow-pink-500"
+              className="h-full bg-gradient-to-r from-[#8c52ff] via-[#a77cd6] to-[#c4a1eb] rounded-full transition-all duration-200 ease-out shadow-sm shadow-[#8c52ff]"
               style={{ width: `${progress}%` }}
             />
           </div>
 
           <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 font-medium px-0.5">
             <span>{isRtl ? 'جاري التحميل...' : 'Loading...'}</span>
-            <span className="text-pink-400 font-bold">{progress}%</span>
+            <span className="text-[#c4a1eb] font-bold">{progress}%</span>
           </div>
         </div>
 

@@ -23,7 +23,7 @@ export const CertificationsSection: React.FC = () => {
   const getCertIcon = (iconName: string) => {
     switch (iconName) {
       case 'GraduationCap':
-        return <GraduationCap size={22} className="text-pink-600" />;
+        return <GraduationCap size={22} className="text-[#8c52ff]" />;
       case 'Award':
         return <Award size={22} className="text-amber-600" />;
       case 'BadgeCheck':
@@ -35,7 +35,7 @@ export const CertificationsSection: React.FC = () => {
       case 'Globe':
         return <Globe size={22} className="text-rose-600" />;
       default:
-        return <Award size={22} className="text-pink-600" />;
+        return <Award size={22} className="text-[#8c52ff]" />;
     }
   };
 
@@ -59,8 +59,8 @@ export const CertificationsSection: React.FC = () => {
                 onClick={() => openCertificateModal(cert)}
                 className={`bg-white p-5 sm:p-6 rounded-3xl flex flex-col justify-between space-y-4 group cursor-pointer border transition-all duration-300 ${
                   hasImage
-                    ? 'border-pink-300 ring-2 ring-pink-500/10 shadow-md hover:shadow-xl hover:scale-[1.02]'
-                    : 'border-slate-200/80 hover:border-pink-300 hover:shadow-md'
+                    ? 'border-[#8c52ff]/40 ring-2 ring-[#8c52ff]/10 shadow-md hover:shadow-xl hover:scale-[1.02]'
+                    : 'border-slate-200/80 hover:border-[#e6d8f8] hover:shadow-md'
                 }`}
               >
                 <div className="space-y-3">
@@ -76,7 +76,7 @@ export const CertificationsSection: React.FC = () => {
 
                   {/* If certificate image is present, show a luxury thumbnail preview */}
                   {hasImage && cert.certificateImage && (
-                    <div className="relative rounded-2xl overflow-hidden border border-pink-200/80 bg-slate-900 group/img">
+                    <div className="relative rounded-2xl overflow-hidden border border-[#8c52ff]/30 bg-slate-900 group/img">
                       <img
                         src={cert.certificateImage}
                         alt={isRtl ? cert.titleAr : cert.titleEn}
@@ -92,7 +92,7 @@ export const CertificationsSection: React.FC = () => {
                   )}
 
                   {/* Title */}
-                  <h3 className="text-sm sm:text-base font-bold text-[#0f172a] font-editorial group-hover:text-pink-600 transition-colors leading-snug">
+                  <h3 className="text-sm sm:text-base font-bold text-[#0e1a36] font-editorial group-hover:text-[#8c52ff] transition-colors leading-snug">
                     {isRtl ? cert.titleAr : cert.titleEn}
                   </h3>
 
@@ -109,7 +109,7 @@ export const CertificationsSection: React.FC = () => {
                     <span>{isRtl ? cert.statusAr : cert.statusEn}</span>
                   </span>
 
-                  <span className="inline-flex items-center gap-1 text-[11px] text-pink-600 font-bold group-hover:underline">
+                  <span className="inline-flex items-center gap-1 text-[11px] text-[#8c52ff] font-bold group-hover:underline">
                     <Eye size={13} />
                     <span>{isRtl ? 'معاينة' : 'Preview'}</span>
                   </span>
