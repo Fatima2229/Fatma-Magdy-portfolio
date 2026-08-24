@@ -15,6 +15,8 @@ import { WhyWorkWithMe } from './components/sections/WhyWorkWithMe';
 import { ContactSection } from './components/sections/ContactSection';
 import { ProjectModal } from './components/ui/ProjectModal';
 import { StoryModal } from './components/ui/StoryModal';
+import { CvModal } from './components/ui/CvModal';
+import { FloatingCvButton } from './components/ui/FloatingCvButton';
 import { Preloader } from './components/ui/Preloader';
 
 export const App: React.FC = () => {
@@ -51,9 +53,13 @@ export const App: React.FC = () => {
           <ContactSection />
         </main>
 
-        {/* Global Modals for Stories, Projects, and Certifications */}
+        {/* Global Modals for Stories, Projects, Certifications, and CV */}
         <ProjectModal />
         <StoryModal />
+        <CvModal />
+
+        {/* Persistent Floating Quick Action Button */}
+        <FloatingCvButton />
 
         {/* Footer */}
         <Footer />

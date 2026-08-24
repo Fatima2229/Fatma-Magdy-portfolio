@@ -9,13 +9,16 @@ import {
   CalendarCheck,
   CheckCircle2,
   Flame,
+  FileText,
 } from 'lucide-react';
 import { InstagramIcon, FacebookIcon, TikTokIcon, LinkedInIcon } from '../ui/SocialIcons';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useCvModal } from '../../hooks/useCvModal';
 import { Button } from '../ui/Button';
 
 export const HeroSection: React.FC = () => {
   const { isRtl, t } = useLanguage();
+  const { openModal: openCvModal } = useCvModal();
   const [activeTab, setActiveTab] = useState<'post' | 'calendar'>('post');
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(1420);
@@ -91,11 +94,22 @@ export const HeroSection: React.FC = () => {
               </Button>
 
               <Button
+                onClick={openCvModal}
+                variant="outline"
+                size="md"
+                className="font-bold px-5 bg-white/90 hover:bg-[#f6f0fc] border-[#8c52ff]/35 text-[#0e1a36] hover:text-[#8c52ff] shadow-2xs"
+                icon={<FileText size={15} className="text-[#8c52ff]" />}
+                iconPosition="left"
+              >
+                {t('cv.heroButton')}
+              </Button>
+
+              <Button
                 as="a"
                 href="#contact"
                 variant="secondary"
                 size="md"
-                className="font-bold px-6"
+                className="font-bold px-5"
                 icon={<Mail size={15} />}
                 iconPosition="left"
               >

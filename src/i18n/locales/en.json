@@ -168,5 +168,16 @@
     "overview": "Project Overview",
     "deliverables": "Deliverables & Strategy",
     "tools": "Tools & Methodologies"
+  },
+  "cv": {
+    "heroButton": "View Official CV",
+    "floatingButton": "View CV",
+    "modalTitle": "Official Curriculum Vitae",
+    "modalSubtitle": "Fatma Magdy • Social Media Specialist • BIS Graduate 2026",
+    "badge": "Verified CV 2026",
+    "download": "Download PDF",
+    "openNewTab": "Open in Full Tab",
+    "close": "Close",
+    "fallbackNotice": "If the PDF preview is not rendered directly in your browser, you can view or download it via the buttons above."
   }
 }

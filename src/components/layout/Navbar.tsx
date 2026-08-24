@@ -42,7 +42,7 @@ export const Navbar: React.FC = () => {
             : 'py-5 bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
           {/* Logo & Brand */}
           <a
             href="#"
@@ -67,14 +67,14 @@ export const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden xl:flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/85 backdrop-blur-md border border-[#e6d8f8] shadow-2xs">
+          <nav className="hidden xl:flex items-center gap-0.5 2xl:gap-1 px-2.5 py-1 rounded-full bg-white/85 backdrop-blur-md border border-[#e6d8f8] shadow-2xs">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
                 <a
                   key={item.id}
                   href={item.href}
-                  className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
+                  className={`px-2.5 2xl:px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
                     isActive
                       ? 'bg-[#0e1a36] text-white shadow-xs'
                       : 'text-slate-600 hover:text-[#8c52ff] hover:bg-[#f6f0fc]'
